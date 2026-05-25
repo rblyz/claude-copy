@@ -8,29 +8,39 @@ When you copy from Claude Code's TUI you get rendering artifacts — box-drawing
 
 ## Install
 
+Two ways — pick one.
+
+### Option A: Use the pre-built app (fast, no Python)
+
+A ready-to-run `dist/Claude Copy.app` ships with the repo, so most people don't need to build anything.
+
 ```bash
 git clone https://github.com/rblyz/claude-copy.git
 cd claude-copy
 ./install.sh
 ```
 
-Ships as a pre-built `Claude Copy.app` — no Python needed at runtime.
+### Option B: Build from source
 
-After install, grant **Accessibility** access (needed to read Cmd+C). The installer prints the exact path to add:
-
-`System Settings → Privacy & Security → Accessibility → + → choose Claude Copy.app`
-
-The app also auto-registers in **Login Items → App Background Activity**, so it runs at every login.
-
-### Build from source
+If you'd rather compile it yourself (audit the code, change something, don't trust prebuilt binaries):
 
 ```bash
+git clone https://github.com/rblyz/claude-copy.git
+cd claude-copy
 pip3 install pyinstaller -r requirements.txt
-python3 -m PyInstaller claude-copy.spec --noconfirm
+python3 -m PyInstaller claude-copy.spec --noconfirm   # produces dist/Claude Copy.app
 ./install.sh
 ```
 
-Requires Python 3 and macOS.
+Requires Python 3.
+
+### After install
+
+Grant **Accessibility** access (needed to read Cmd+C). The installer prints the exact path:
+
+`System Settings → Privacy & Security → Accessibility → + → choose dist/Claude Copy.app`
+
+The app then auto-registers in **System Settings → General → Login Items → App Background Activity**, so it runs at every login.
 
 ## What it does
 
