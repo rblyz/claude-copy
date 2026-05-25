@@ -8,11 +8,7 @@ When you copy from Claude Code's TUI you get rendering artifacts — box-drawing
 
 ## Install
 
-Two ways — pick one.
-
-### Option A: Use the pre-built app (fast, no Python)
-
-A ready-to-run `dist/Claude Copy.app` ships with the repo, so most people don't need to build anything.
+### Use the pre-built app
 
 ```bash
 git clone https://github.com/rblyz/claude-copy.git
@@ -20,19 +16,15 @@ cd claude-copy
 ./install.sh
 ```
 
-### Option B: Build from source
-
-If you'd rather compile it yourself (audit the code, change something, don't trust prebuilt binaries):
+### Build from source
 
 ```bash
 git clone https://github.com/rblyz/claude-copy.git
 cd claude-copy
 pip3 install pyinstaller -r requirements.txt
-python3 -m PyInstaller claude-copy.spec --noconfirm   # produces dist/Claude Copy.app
+python3 -m PyInstaller claude-copy.spec --noconfirm
 ./install.sh
 ```
-
-Requires Python 3.
 
 ### After install
 
