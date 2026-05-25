@@ -1,0 +1,11 @@
+__pycache__/
+.venv/
+*.pyc
+*.log
+.DS_Store
+com.claude-copy.plist
+cpu-runtime-test.txt
+build/
+*.spec
+пример.md
+пример copy.md
