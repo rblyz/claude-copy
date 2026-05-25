@@ -25,7 +25,7 @@ The app also auto-registers in **Login Items → App Background Activity**, so i
 ### Build from source
 
 ```bash
-pip3 install pyinstaller pyobjc
+pip3 install pyinstaller -r requirements.txt
 python3 -m PyInstaller claude-copy.spec --noconfirm
 ./install.sh
 ```
